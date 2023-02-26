@@ -21,8 +21,17 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage --watchAll",
+    "test:prod": "react-scripts test --watchAll --coverage --watchAll=false",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/reportWebVitals.ts",
+      "<rootDir>/src/index.ts",
+      "<rootDir>/src/store/store.ts",
+      "<rootDir>/features/shop/models/item.type.ts"
+    ]
   },
   "eslintConfig": {
     "extends": [
